@@ -1,8 +1,12 @@
 {
   "name": "group",
   "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "build:ui": "pnpm build -C packages/ui",
-    "dev:myapp": "pnpm dev -C packages/my-app"
+    "dev:remix": "pnpm dev -C packages/my-app",
+    "dev:cra": "pnpm start -C packages/my-create-react-app"
   }
 }
