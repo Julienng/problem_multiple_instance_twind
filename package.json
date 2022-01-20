@@ -1,0 +1,8 @@
+{
+  "name": "group",
+  "private": true,
+  "scripts": {
+    "build:ui": "pnpm build -C packages/ui",
+    "dev:myapp": "pnpm dev -C packages/my-app"
+  }
+}
