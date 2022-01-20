@@ -1,0 +1,1 @@
+export { twindConfig } from "ui";

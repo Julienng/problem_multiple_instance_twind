@@ -5,34 +5,7 @@ importers:
   .:
     specifiers: {}
 
-  packages/my-app:
-    specifiers:
-      '@remix-run/dev': ^1.1.1
-      '@remix-run/react': ^1.1.1
-      '@remix-run/serve': ^1.1.1
-      '@types/react': ^17.0.24
-      '@types/react-dom': ^17.0.9
-      react: ^17.0.2
-      react-dom: ^17.0.2
-      remix: ^1.1.1
-      twind: ^0.16.16
-      typescript: ^4.1.2
-      ui: workspace:*
-    dependencies:
-      '@remix-run/react': 1.1.1_react-dom@17.0.2+react@17.0.2
-      '@remix-run/serve': 1.1.1_react-dom@17.0.2+react@17.0.2
-      react: 17.0.2
-      react-dom: 17.0.2_react@17.0.2
-      remix: 1.1.1
-      twind: 0.16.16_typescript@4.1.6
-      ui: link:../ui
-    devDependencies:
-      '@remix-run/dev': 1.1.1
-      '@types/react': 17.0.38
-      '@types/react-dom': 17.0.11
-      typescript: 4.1.6
-
-  packages/my-create-react-app:
+  packages/cra:
     specifiers:
       '@testing-library/jest-dom': ^5.16.1
       '@testing-library/react': ^12.1.2
@@ -54,6 +27,33 @@ importers:
       ui: link:../ui
       web-vitals: 2.1.3
 
+  packages/remix:
+    specifiers:
+      '@remix-run/dev': ^1.1.1
+      '@remix-run/react': ^1.1.1
+      '@remix-run/serve': ^1.1.1
+      '@types/react': ^17.0.24
+      '@types/react-dom': ^17.0.9
+      react: ^17.0.2
+      react-dom: ^17.0.2
+      remix: ^1.1.1
+      twind: ^0.16.16
+      typescript: ^4.1.2
+      ui: workspace:*
+    dependencies:
+      '@remix-run/react': 1.1.1_react-dom@17.0.2+react@17.0.2
+      '@remix-run/serve': 1.1.1_react-dom@17.0.2+react@17.0.2
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+      remix: 1.1.1
+      twind: 0.16.16_typescript@4.5.4
+      ui: link:../ui
+    devDependencies:
+      '@remix-run/dev': 1.1.1
+      '@types/react': 17.0.38
+      '@types/react-dom': 17.0.11
+      typescript: 4.5.4
+
   packages/ui:
     specifiers:
       '@twind/forms': ^0.1.4
@@ -72,6 +72,29 @@ importers:
       react: 17.0.2
       twind: 0.16.16_typescript@4.1.6
       typescript: 4.1.6
+
+  packages/vite:
+    specifiers:
+      '@types/react': ^17.0.33
+      '@types/react-dom': ^17.0.10
+      '@vitejs/plugin-react': ^1.0.7
+      react: ^17.0.2
+      react-dom: ^17.0.2
+      twind: ^0.16.16
+      typescript: ^4.4.4
+      ui: workspace:*
+      vite: ^2.7.2
+    dependencies:
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+      twind: 0.16.16_typescript@4.5.4
+      ui: link:../ui
+    devDependencies:
+      '@types/react': 17.0.38
+      '@types/react-dom': 17.0.11
+      '@vitejs/plugin-react': 1.1.4
+      typescript: 4.5.4
+      vite: 2.7.13
 
 packages:
 
@@ -1027,6 +1050,26 @@ packages:
     dependencies:
       '@babel/core': 7.16.10
       '@babel/plugin-transform-react-jsx': 7.16.7_@babel+core@7.16.10
+
+  /@babel/plugin-transform-react-jsx-self/7.16.7_@babel+core@7.16.10:
+    resolution: {integrity: sha512-oe5VuWs7J9ilH3BCCApGoYjHoSO48vkjX2CbA5bFVhIuO2HKxA3vyF7rleA4o6/4rTDbk6r8hBW7Ul8E+UZrpA==}
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': 7.16.10
+      '@babel/helper-plugin-utils': 7.16.7
+    dev: true
+
+  /@babel/plugin-transform-react-jsx-source/7.16.7_@babel+core@7.16.10:
+    resolution: {integrity: sha512-rONFiQz9vgbsnaMtQlZCjIRwhJvlrPET8TabIUK2hzlXw9B9s2Ieaxte1SCOOXMbWRHodbKixNf3BLcWVOQ8Bw==}
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': 7.16.10
+      '@babel/helper-plugin-utils': 7.16.7
+    dev: true
 
   /@babel/plugin-transform-react-jsx/7.16.7_@babel+core@7.16.10:
     resolution: {integrity: sha512-8D16ye66fxiE8m890w0BpPpngG9o9OVBBy0gH2E+2AR7qMR2ZpTYJEqLxAsoroenMId0p/wMW+Blc0meDgu0Ag==}
@@ -2587,6 +2630,22 @@ packages:
       '@typescript-eslint/types': 5.10.0
       eslint-visitor-keys: 3.2.0
     dev: false
+
+  /@vitejs/plugin-react/1.1.4:
+    resolution: {integrity: sha512-cMUBDonNY8PPeHWjIrYKbRn6bLSunh/Ixo2XLLBd3DM0uYBZft+c+04zkGhhN1lAwvoRKJ2FdtvhGhPgViHc6w==}
+    engines: {node: '>=12.0.0'}
+    dependencies:
+      '@babel/core': 7.16.10
+      '@babel/plugin-transform-react-jsx': 7.16.7_@babel+core@7.16.10
+      '@babel/plugin-transform-react-jsx-development': 7.16.7_@babel+core@7.16.10
+      '@babel/plugin-transform-react-jsx-self': 7.16.7_@babel+core@7.16.10
+      '@babel/plugin-transform-react-jsx-source': 7.16.7_@babel+core@7.16.10
+      '@rollup/pluginutils': 4.1.2
+      react-refresh: 0.11.0
+      resolve: 1.21.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
 
   /@web-std/blob/3.0.1:
     resolution: {integrity: sha512-opuhO8ZGGUj2jdFwfgMjWjVdKaHlQanGWXxj5wV2YQ1uGTuL/SADnsDitpMfRb+lSpmQyzpwZFfj4CNKQuwSKQ==}
@@ -9166,7 +9225,6 @@ packages:
   /react-refresh/0.11.0:
     resolution: {integrity: sha512-F27qZr8uUqwhWZboondsPx8tnC3Ct3SxZA3V5WyEvujRyyNv0VYPhoBg1gZ8/MV5tubQp76Trw8lTv9hzRBa+A==}
     engines: {node: '>=0.10.0'}
-    dev: false
 
   /react-router-dom/6.2.1_react-dom@17.0.2+react@17.0.2:
     resolution: {integrity: sha512-I6Zax+/TH/cZMDpj3/4Fl2eaNdcvoxxHoH1tYOREsQ22OKDYofGebrNm6CTPUcvLvZm63NL/vzCYdjf9CUhqmA==}
@@ -10597,6 +10655,22 @@ packages:
       htmlparser2: 6.1.0
       style-vendorizer: 2.1.1
       typescript: 4.1.6
+    dev: true
+
+  /twind/0.16.16_typescript@4.5.4:
+    resolution: {integrity: sha512-UlAYjkGCdgjg4xU1SIwRW0PpG0anZrY32+kS2jYsi32yb4RuW0ttzaI1OglgwAUk/rZwzoINilnIFORzOSFZag==}
+    engines: {node: '>=10.13'}
+    peerDependencies:
+      typescript: ^4.1.0
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+    dependencies:
+      csstype: 3.0.10
+      htmlparser2: 6.1.0
+      style-vendorizer: 2.1.1
+      typescript: 4.5.4
+    dev: false
 
   /type-check/0.3.2:
     resolution: {integrity: sha1-WITKtRLPHTVeP7eE8wgEsrUg23I=}
@@ -10913,6 +10987,30 @@ packages:
       is-buffer: 2.0.5
       unist-util-stringify-position: 3.0.0
       vfile-message: 3.1.0
+    dev: true
+
+  /vite/2.7.13:
+    resolution: {integrity: sha512-Mq8et7f3aK0SgSxjDNfOAimZGW9XryfHRa/uV0jseQSilg+KhYDSoNb9h1rknOy6SuMkvNDLKCYAYYUMCE+IgQ==}
+    engines: {node: '>=12.2.0'}
+    hasBin: true
+    peerDependencies:
+      less: '*'
+      sass: '*'
+      stylus: '*'
+    peerDependenciesMeta:
+      less:
+        optional: true
+      sass:
+        optional: true
+      stylus:
+        optional: true
+    dependencies:
+      esbuild: 0.13.14
+      postcss: 8.4.5
+      resolve: 1.21.0
+      rollup: 2.64.0
+    optionalDependencies:
+      fsevents: 2.3.2
     dev: true
 
   /w3c-hr-time/1.0.2:

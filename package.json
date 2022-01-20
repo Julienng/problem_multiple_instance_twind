@@ -6,7 +6,8 @@
   ],
   "scripts": {
     "build:ui": "pnpm build -C packages/ui",
-    "dev:remix": "pnpm dev -C packages/my-app",
-    "dev:cra": "pnpm start -C packages/my-create-react-app"
+    "dev:remix": "pnpm dev -C packages/remix",
+    "dev:cra": "pnpm start -C packages/cra",
+    "dev:vite": "pnpm dev -C packages/vite"
   }
 }
