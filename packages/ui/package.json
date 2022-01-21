@@ -16,7 +16,7 @@
     }
   },
   "scripts": {
-    "build": "microbundle --jsx React.createElement --jsxImportSource react --globals react/jsx-runtime=jsx",
+    "build": "microbundle --jsx React.createElement --jsxImportSource react --globals react/jsx-runtime=jsx --no-compress",
     "dev": "microbundle watch --no-compress --jsx React.createElement",
     "deploy": "npm publish",
     "typecheck": "tsc --noEmit"
@@ -28,21 +28,14 @@
     "babel.config.js",
     "index.d.ts"
   ],
-  "peerDependencies": {
-    "react": ">=17.0.0",
-    "react-dom": ">=17.0.0",
-    "react-query": "^3.5.11",
-    "twind": "^0.16.16"
-  },
   "dependencies": {
-    "@twind/forms": "^0.1.4"
-  },
-  "devDependencies": {
+    "react-query": "^3.5.11",
+    "@twind/forms": "^0.1.4",
+    "twind": "^0.16.16",
     "@types/react": "^16.14.21",
     "@types/react-dom": "^16.9.14",
     "microbundle": "^0.14.2",
     "react": ">=17.0.0",
-    "typescript": "4.1.6",
-    "twind": "^0.16.16"
+    "typescript": "4.1.6"
   }
 }
