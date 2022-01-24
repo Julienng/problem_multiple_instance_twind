@@ -7,6 +7,7 @@ import {
 import { setup } from "twind";
 import { twindConfig } from "../../twind.config";
 import { renderToString } from "react-dom/server";
+import { useEffect } from "react";
 
 declare global {
   var __sheet: VirtualSheet;

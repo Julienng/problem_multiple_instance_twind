@@ -9,5 +9,13 @@
     "dev:remix": "pnpm dev -C packages/remix",
     "dev:cra": "pnpm start -C packages/cra",
     "dev:vite": "pnpm dev -C packages/vite"
+  },
+  "devDependencies": {
+    "@microsoft/rush": "^5.60.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "twind": "^0.16.16"
+    }
   }
 }

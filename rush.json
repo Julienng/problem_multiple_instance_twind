@@ -1,0 +1,31 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/rush.schema.json",
+  "rushVersion": "5.60.0",
+  "pnpmVersion": "6.7.1",
+  "pnpmOptions": {
+    "useWorkspaces": true
+  },
+  "nodeSupportedVersionRange": ">=12.13.0 <13.0.0 || >=14.15.0 <15.0.0 || >=16.13.0 <17.0.0",
+  "projects": [
+    {
+      "packageName": "my-cra",
+      "projectFolder": "packages/my-cra",
+      "shouldPublish": false
+    },
+    {
+      "packageName": "my-remix",
+      "projectFolder": "packages/my-remix",
+      "shouldPublish": false
+    },
+    {
+      "packageName": "ui",
+      "projectFolder": "packages/ui",
+      "shouldPublish": false
+    },
+    {
+      "packageName": "my-vite",
+      "projectFolder": "packages/my-vite",
+      "shouldPublish": false
+    }
+  ]
+}
