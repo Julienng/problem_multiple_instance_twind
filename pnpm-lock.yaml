@@ -84,7 +84,7 @@ importers:
     specifiers:
       '@types/react': ^17.0.33
       '@types/react-dom': ^17.0.10
-      '@vitejs/plugin-react': ^1.0.7
+      '@vitejs/plugin-react': ^1.0.9
       react: ^17.0.2
       react-dom: ^17.0.2
       twind: ^0.16.16
