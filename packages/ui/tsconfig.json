@@ -1,13 +1,9 @@
 {
+  "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "lib": ["dom", "dom.iterable", "ES2019"],
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
-    "moduleResolution": "node",
-    "jsx": "react",
-    "noEmit": true,
-    "skipLibCheck": true,
-    "allowSyntheticDefaultImports": true
+    "module": "esnext",
+    "jsx": "react-jsx",
+    "baseUrl": "./"
   },
-  "include": ["src"]
+  "include": ["./src"]
 }

@@ -4,7 +4,7 @@ import {
   getStyleTagProperties,
   VirtualSheet,
 } from "twind/sheets";
-import { setup } from "twind";
+import { tw, setup } from "twind";
 import { twindConfig } from "../../twind.config";
 import { renderToString } from "react-dom/server";
 
@@ -31,6 +31,10 @@ export function initStyles() {
       sheet: global.__sheet,
     });
   }
+}
+
+export function initStylesClient() {
+  setup(twindConfig);
 }
 
 function digestMessage(message: string) {

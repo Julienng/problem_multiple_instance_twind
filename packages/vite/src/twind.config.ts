@@ -1,1 +1,1 @@
-export { twindConfig } from "ui";
+export { twindConfig } from "ui/config";

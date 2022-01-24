@@ -1,5 +1,5 @@
 import type { Configuration } from "twind";
-import { setup } from "twind";
+
 import {
   formInput,
   formSelect,
@@ -24,5 +24,6 @@ export const twindConfig: Configuration = {
   plugins,
 };
 
-// if i uncomment this line, the input with form-input will work
+// if i uncomment those lines, the input with form-input will work
+// import { setup } from "twind";
 // setup(twindConfig);

@@ -9,5 +9,9 @@
     "dev:remix": "pnpm dev -C packages/remix",
     "dev:cra": "pnpm start -C packages/cra",
     "dev:vite": "pnpm dev -C packages/vite"
+  },
+  "devDependencies": {
+    "distilt": "^0.16.4",
+    "typescript": "^4.5.5"
   }
 }

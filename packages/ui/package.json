@@ -2,37 +2,36 @@
   "name": "ui",
   "version": "2.1.2",
   "description": "",
-  "source": "src/index.tsx",
-  "main": "dist/index.js",
-  "module": "dist/index.module.js",
-  "unpkg": "dist/index.umd.js",
-  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "tag": "next",
+    "access": "public",
+    "directory": "dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Julienng/problem_multiple_instance_twind",
+    "directory": "packages/ui"
+  },
+  "// The 'module', 'unpkg' and 'types' fields are added by distilt": "",
+  "main": "src/index.tsx",
+  "// Each entry is expanded into several bundles (module, script, types, require, node, and default)": "",
   "exports": {
-    ".": {
-      "browser": "./dist/index.module.js",
-      "umd": "./dist/index.umd.js",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js"
-    }
+    ".": "./src/index.tsx",
+    "./config": "./src/twind.config.ts",
+    "./package.json": "./package.json"
   },
-  "scripts": {
-    "build": "microbundle --jsx React.createElement --jsxImportSource react --globals react/jsx-runtime=jsx",
-    "dev": "microbundle watch --no-compress --jsx React.createElement",
-    "deploy": "npm publish",
-    "typecheck": "tsc --noEmit"
-  },
-  "files": [
-    "dist/*",
-    "package.json",
-    "tsconfig.json",
-    "babel.config.js",
-    "index.d.ts"
-  ],
+  "// These are relative from within the dist/ folder": "",
+  "sideEffects": false,
   "peerDependencies": {
     "react": ">=17.0.0",
-    "react-dom": ">=17.0.0",
     "react-query": "^3.5.11",
-    "twind": "^0.16.16"
+    "twind": "^0.16.16",
+    "typescript": "^4.5.5"
+  },
+  "peerDependenciesMeta": {
+    "typescript": {
+      "optional": true
+    }
   },
   "dependencies": {
     "@twind/forms": "^0.1.4"
@@ -40,9 +39,11 @@
   "devDependencies": {
     "@types/react": "^16.14.21",
     "@types/react-dom": "^16.9.14",
-    "microbundle": "^0.14.2",
     "react": ">=17.0.0",
-    "typescript": "4.1.6",
     "twind": "^0.16.16"
+  },
+  "scripts": {
+    "build": "distilt",
+    "dev": "microbundle watch --no-compress --jsx React.createElement"
   }
 }
